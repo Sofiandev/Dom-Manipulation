@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+  /* font dans le * pour l'avoir dans les btn, input etc */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+body {
+  text-align: center;
+  margin: 0;
+  color: white;
+  min-height: 200vh;
+  overflow-x: hidden;
+}
+
+.box {
+  border: white;
+  background-color: black;
+  transition: 0.25s ease;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  visibility: hidden;
+  width: 240px;
+  margin: 10px auto 0;
+  opacity: 0;
+  transition: 0.8s;
+  transform: translateY(-20px);
+  border-radius: 5px;
+}
+
+.question-clicked {
+  background: rgb(47, 47, 47);
+  border-radius: 30px;
+  border: 6px dashed pink;
+}
+
+.show-response {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mousemove {
+  width: 50px;
+  height: 50px;
+  border: 2px solid pink;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  transition: 0.2s ease;
+  z-index: -1;
+}
+
+nav {
+  background: pink;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: -50px;
+  transition: 0.6s ease;
+}
+ul {
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  padding: 0;
+}
