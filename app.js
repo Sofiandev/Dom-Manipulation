@@ -78,7 +78,7 @@ document.addEventListener("keypress", (e) => {
   } else {
     keypressContainer.style.background = "orange";
   }
-  ring(e.key);
+  if (e.key === "a") ring(e.key);
 });
 
 //--------------------------------------------------------
@@ -93,4 +93,25 @@ window.addEventListener("scroll", () => {
   } else {
     nav.style.top = "-50px";
   }
+});
+
+//--------------------------------------------------------
+
+// Form Events
+const inputName = document.querySelector('input[type="text"]');
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+console.log(form);
+let pseudo = "";
+let language = "";
+const result = document.querySelector(".result");
+
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value;
+  result.textContent = e.target.value;
+});
+
+select.addEventListener("input", (e) => {
+  language = e.target.value;
+  console.log(language);
 });
